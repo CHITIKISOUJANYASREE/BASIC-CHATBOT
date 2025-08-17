@@ -1,0 +1,34 @@
+# Basic Rule-Based Chatbot (Version 2)
+
+def get_response(message):
+    """Return a response based on user message."""
+    msg = message.lower()
+
+    if msg in ["hi", "hello", "hey"]:
+        return "Hello! Nice to meet you 👋"
+    elif msg in ["how are you", "how are you doing"]:
+        return "I'm just a program, but I'm doing great! How about you?"
+    elif "help" in msg:
+        return "Sure! I can chat with you. Try asking me about my name or say hello!"
+    elif "name" in msg:
+        return "You can call me ChatBot 2.0 🤖"
+    elif "bye" in msg or "exit" in msg:
+        return "Goodbye! Talk to you soon 😊"
+    else:
+        return "Hmm... I don't understand that. Can you try something else?"
+
+def start_chat():
+    """Main loop for chatbot conversation."""
+    print("Chatbot: Hi! I'm ChatBot 2.0. Type 'bye' to quit.")
+
+    while True:
+        user_message = input("You: ")
+        response = get_response(user_message)
+        print("Chatbot:", response)
+
+        if user_message.lower() in ["bye", "exit"]:
+            break
+
+# Run chatbot
+if __name__ == "__main__":
+    start_chat()
