@@ -15,6 +15,3 @@ chatbot/
 │── chatbot.py      # Main chatbot program
 │── README.md       # Project documentation
 
-# BASIC-CHATBOT
-# BASIC-CHATBOT
-# BASIC-CHATBOT
